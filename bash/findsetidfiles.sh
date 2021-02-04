@@ -17,7 +17,7 @@
 
 echo "Setuid files:"
 echo "============="
-find / -type f -executable -exec ls -lh {} + 2>/dev/null | sort -k 5 | head -n 12 | awk -F: '{print $1,$6}'
+find / -type f -exec ls -lh {} + 2>/dev/null | sort -k 5 -hk 2 -r | head -n 12 | awk '{print $3, $5, $9}'
 echo "This is lab1"
 
 # for the task, add
